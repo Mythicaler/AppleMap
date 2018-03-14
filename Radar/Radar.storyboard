@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Vgw-Ug-0FZ">
+            <objects>
+                <viewController id="Elg-lI-fgq" customClass="RadarViewController" customModule="Miss_Chief" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YQg-br-132"/>
+                        <viewControllerLayoutGuide type="bottom" id="NbT-8e-Srw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t6o-hK-c5r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FRh-yI-dwT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="Elg-lI-fgq" id="FFu-WT-WhL"/>
+                                </connections>
+                            </mapView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th0-DT-Nqc">
+                                <rect key="frame" x="16" y="618" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="6cX-LU-c7y"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzw-4Y-iyB">
+                                <rect key="frame" x="8" y="75" width="52" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="49h-SH-dMy"/>
+                                    <constraint firstAttribute="width" constant="52" id="tsD-cH-Ns3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="14"/>
+                                <color key="textColor" red="0.91464310879999999" green="0.3887653351" blue="0.53644114730000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NbT-8e-Srw" firstAttribute="top" secondItem="th0-DT-Nqc" secondAttribute="bottom" constant="8" id="3sX-hW-LJh"/>
+                            <constraint firstItem="FRh-yI-dwT" firstAttribute="leading" secondItem="t6o-hK-c5r" secondAttribute="leading" id="7AH-Zc-jX9"/>
+                            <constraint firstItem="Nzw-4Y-iyB" firstAttribute="top" secondItem="YQg-br-132" secondAttribute="bottom" constant="11" id="YFF-3z-XCq"/>
+                            <constraint firstAttribute="trailing" secondItem="FRh-yI-dwT" secondAttribute="trailing" id="e7D-Bz-E0B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="th0-DT-Nqc" secondAttribute="trailing" id="etb-cS-QBH"/>
+                            <constraint firstItem="FRh-yI-dwT" firstAttribute="top" secondItem="YQg-br-132" secondAttribute="bottom" id="f8H-Ec-T7O"/>
+                            <constraint firstItem="th0-DT-Nqc" firstAttribute="leading" secondItem="t6o-hK-c5r" secondAttribute="leadingMargin" id="nmR-49-CXY"/>
+                            <constraint firstItem="NbT-8e-Srw" firstAttribute="top" secondItem="FRh-yI-dwT" secondAttribute="bottom" id="uME-7f-xb6"/>
+                            <constraint firstItem="Nzw-4Y-iyB" firstAttribute="leading" secondItem="t6o-hK-c5r" secondAttribute="leading" constant="8" id="uPw-J8-SeM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="PWq-cd-7I5"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="Nzw-4Y-iyB" id="FW7-tc-zFI"/>
+                        <outlet property="pinScrollView" destination="th0-DT-Nqc" id="2yS-Uc-fAO"/>
+                        <outlet property="radarMapV" destination="FRh-yI-dwT" id="Gnc-5B-me9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlT-TW-qUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="231.63418290854574"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uzv-Ku-SkQ">
+            <objects>
+                <navigationController storyboardIdentifier="Start" automaticallyAdjustsScrollViewInsets="NO" id="cRi-Pc-WL6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SV7-wz-9jq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Elg-lI-fgq" kind="relationship" relationship="rootViewController" id="1of-Fh-XtC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feo-uh-rPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="231.63418290854574"/>
+        </scene>
+    </scenes>
+</document>

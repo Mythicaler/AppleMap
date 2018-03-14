@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.onTouchNearby() -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(views[0] as! UIButton).isSelected">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.viewDidLoad() -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.mapView(MKMapView, viewFor : MKAnnotation) -&gt; MKAnnotationView?:ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotationView?.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
